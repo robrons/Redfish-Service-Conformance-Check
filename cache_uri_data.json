@@ -1,59 +1,96 @@
 {
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288": {
-        "@odata.context": "/redfish/v1/$metadata#DellJob.DellJob",
-        "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288",
-        "@odata.type": "#DellJob.v1_0_0.DellJob",
-        "CompletionTime": "2017-07-10T16:40:43",
-        "Description": "Job Instance",
-        "EndTime": null,
-        "Id": "JID_997228434288",
-        "JobState": "Completed",
-        "JobType": "iDRACConfiguration",
-        "Message": "Job successfully Completed",
-        "MessageArgs": [],
-        "MessageId": "JCP007",
-        "Name": "iDRACConfig:iDRAC.Embedded.1",
-        "PercentComplete": 100,
-        "StartTime": "TIME_NOW",
-        "TargetSettingsURI": null
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/2454246": {
+        "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+        "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/2454246",
+        "@odata.type": "#LogEntry.v1_0_2.LogEntry",
+        "Created": "2018-08-22T10:37:59-05:00",
+        "Description": " Log Entry 2454246",
+        "EntryType": "Oem",
+        "Id": "2454246",
+        "Links": {},
+        "Message": "The previous log entry was repeated 1000 times.",
+        "MessageArgs": [
+            "1000"
+        ],
+        "MessageArgs@odata.count": 1,
+        "MessageID": "LOG007",
+        "Name": " Log Entry 2454246",
+        "OemRecordFormat": "Dell",
+        "Severity": "Ok"
     },
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288_header": {
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/2454246_header": {
         "access-control-allow-origin": "*",
-        "allow": "DELETE",
         "cache-control": "no-cache",
-        "content-length": "519",
+        "content-length": "492",
         "content-type": "application/json;odata.metadata=minimal;charset=utf-8",
-        "date": "Wed, 29 Aug 2018 20:11:27 GMT",
-        "link": "</redfish/v1/Schemas/DellJob.v1_0_0.json>;rel=describedby",
+        "date": "Wed, 29 Aug 2018 20:12:29 GMT",
+        "link": "</redfish/v1/Schemas/LogEntry.v1_0_2.json>;rel=describedby",
         "odata-version": "4.0",
         "server": "Apache/2.4",
         "x-frame-options": "DENY"
     },
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288_status": 200,
-    "/redfish/v1/SessionService": {
-        "@odata.context": "/redfish/v1/$metadata#SessionService.SessionService",
-        "@odata.id": "/redfish/v1/SessionService",
-        "@odata.type": "#SessionService.v1_0_2.SessionService",
-        "Description": "Session Service",
-        "Id": "SessionService",
-        "Name": "Session Service",
-        "ServiceEnabled": true,
-        "SessionTimeout": 1800,
-        "Sessions": {
-            "@odata.id": "/redfish/v1/Sessions"
-        }
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/2454246_status": 200,
+    "/redfish/v1/Systems/System.Embedded.1/BootSources": {
+        "@Redfish.Settings": {
+            "@odata.context": "/redfish/v1/$metadata#Settings.Settings",
+            "@odata.type": "#Settings.v1_0_2.Settings",
+            "SettingsObject": {
+                "@odata.id": "/redfish/v1/Systems/System.Embedded.1/BootSources/Settings"
+            }
+        },
+        "@odata.context": "/redfish/v1/$metadata#DellBootSources.DellBootSources",
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/BootSources",
+        "@odata.type": "#DellBootSources.v1_0_0.DellBootSources",
+        "AttributeRegistry": "DellBootSourcesRegistry.v1_0_0",
+        "Attributes": {
+            "UefiBootSeq": [
+                {
+                    "Enabled": true,
+                    "Id": "BIOS.Setup.1-1#UefiBootSeq#Unknown.Unknown.1-1#6a5b6f7087238ab1275889252ad0dffe",
+                    "Index": 0,
+                    "Name": "Unknown.Unknown.1-1"
+                },
+                {
+                    "Enabled": true,
+                    "Id": "BIOS.Setup.1-1#UefiBootSeq#NIC.PxeDevice.1-1#81e55d13a36bc065ca3bf9bf8d699391",
+                    "Index": 1,
+                    "Name": "NIC.PxeDevice.1-1"
+                },
+                {
+                    "Enabled": false,
+                    "Id": "BIOS.Setup.1-1#UefiBootSeq#Unknown.Unknown.3-1#c7e65d0c7c87ed3490bb31a0ca15ae8d",
+                    "Index": 2,
+                    "Name": "Unknown.Unknown.3-1"
+                },
+                {
+                    "Enabled": true,
+                    "Id": "BIOS.Setup.1-1#UefiBootSeq#Unknown.Unknown.4-1#1bf3271ff7089d67a1c7e9700e270249",
+                    "Index": 3,
+                    "Name": "Unknown.Unknown.4-1"
+                },
+                {
+                    "Enabled": true,
+                    "Id": "BIOS.Setup.1-1#UefiBootSeq#NIC.PxeDevice.2-1#e158d778680bb5e05f7e79c4a8a46dd9",
+                    "Index": 4,
+                    "Name": "NIC.PxeDevice.2-1"
+                }
+            ]
+        },
+        "Description": "Boot Sources Current Settings",
+        "Id": "BootSources",
+        "Name": "Boot Sources Configuration Current Settings"
     },
-    "/redfish/v1/SessionService_header": {
+    "/redfish/v1/Systems/System.Embedded.1/BootSources_header": {
         "access-control-allow-origin": "*",
-        "allow": "PATCH",
+        "allow": "GET,HEAD",
         "cache-control": "no-cache",
-        "content-length": "339",
+        "content-length": "1320",
         "content-type": "application/json;odata.metadata=minimal;charset=utf-8",
-        "date": "Wed, 29 Aug 2018 20:11:27 GMT",
-        "link": "</redfish/v1/Schemas/SessionService.v1_0_2.json>;rel=describedby",
+        "date": "Wed, 29 Aug 2018 20:12:30 GMT",
+        "link": "</redfish/v1/Schemas/DellBootSources.v1_0_0.json>;rel=describedby",
         "odata-version": "4.0",
         "server": "Apache/2.4",
         "x-frame-options": "DENY"
     },
-    "/redfish/v1/SessionService_status": 200
+    "/redfish/v1/Systems/System.Embedded.1/BootSources_status": 200
 }

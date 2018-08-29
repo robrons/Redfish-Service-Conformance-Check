@@ -349,7 +349,11 @@ class Log:
         # handle open/close of the log files
         #
         if (log_control == 'OPEN' and SUT_prop and service_root):
+
             ## open the assertion log files and write a unique test header for this run
+            # Set start time for assertion 
+            data['Start Time'] = time.time()
+
             self.SUT_log_Folder = os.path.join(self.LogDestinationPath, SUT_prop['DisplayName'])
             if not os.path.isdir(self.SUT_log_Folder):
                 try:
@@ -446,9 +450,21 @@ class Log:
             with open('serveData.json', mode='r') as fr: 
                 assertionResult = json.load(fr) 
 
-            #datetime string
+            #datetime string and total run time calculation
             dstr = str(datetime.now().strftime("%Y%m%d-%H%M%S"))
-     
+            start = data['Start Time']
+            del data['Start Time']
+            end = time.time()
+            runTimeStr = ("%d Min & %d Sec" %((end - start)/60, (end - start)%60))
+ 
+            # Adding summary data
+            data['Summary'] = {
+            "Description":SUT_prop['DisplayName'], 
+            "DNS Name":SUT_prop['DnsName'], 
+            "Cached URIs":SUT_prop['NumUrisToCache'],
+            "Run Time": runTimeStr 
+            }
+
             assertionResult[dstr] = data
 
             with open('serveData.json', mode='w') as fw:
