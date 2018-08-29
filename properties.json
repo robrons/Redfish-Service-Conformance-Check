@@ -25,13 +25,13 @@
   "RedfishServiceCheckTool_SUTConfiguration": {
     "SUTs": [
       {
-        "Password": "",
-        "LoginName": "",
+        "Password": "redfish",
+        "LoginName": "root",
         "AllowAction_LogServiceClearLog": "yes",
-        "DnsName": "",
-        "DisplayName": "",
+        "DnsName": "10.9.1.1",
+        "DisplayName": "Redfish",
         "RedfishVersion": "v1",
-        "Number of URI's to Cache": ""
+        "Number of URI's to Cache": "1"
       }
     ],
     "Description": "Setup your server (SUT) location/authorization information here:  AllowAction_LogServiceClearLog = yes will allow this Action during test"

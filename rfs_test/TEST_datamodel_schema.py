@@ -1613,6 +1613,7 @@ def run(self, log):
     #Section 7
     cacheURI(self)
     assertion_status = Assertion_7_6_1(self, log)
+    '''
     assertion_status = Assertion_7_0_1(self, log)
     assertion_status = Assertion_7_2_1(self, log)
     assertion_status = Assertion_7_3_0(self, log)
@@ -1648,3 +1649,4 @@ def run(self, log):
     assertion_status = Assertion_7_6_3(self, log)
     assertion_status = Assertion_7_6_5_1(self, log)
     #assertion_status = Assertion_7_8_1(self, log)
+    '''

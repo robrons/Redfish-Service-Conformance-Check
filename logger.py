@@ -28,6 +28,7 @@ import shutil
 from datetime import datetime
 import sys
 import os
+import json
 
 ## openpyxl is not a default install for python - you will need to install it using 'pip'... 
 # -- to install it...
@@ -45,6 +46,7 @@ from openpyxl.styles import Alignment, Side, Border, colors, PatternFill, Font
 #   accessing the spreadsheet cells...
 ###################################################################################################     
 class Log:         
+
     def __init__(self):
         # tracking tool release revision with a date stamp -  month:day:year   
         self.RedfishServiceCheck_Revision = "07.11.16"
@@ -53,6 +55,8 @@ class Log:
         self.WARN = 'WARN'
         self.FAIL = 'FAIL'
         self.INCOMPLETE = 'PASS (Incomplete). Check Log for details' # to remove
+        self.assertionJSN = [dict()] 
+        self.indvProp = dict()
 
         # Redfish latest spec url
         self.RedfishSpecHyperlinkPath = 'https://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.0.2.pdf'
@@ -324,6 +328,7 @@ class Log:
     ################################################################################################
     def assertion_log(self, log_control, log_string, SUT_prop = None, service_root = None) :       
         assertion_id = self.AssertionID
+        self.indvProp['Rule'] = self.AssertionID
         ##
         # handle open/close of the log files
         #
@@ -418,7 +423,7 @@ class Log:
 
         # log an assetion id tag at the start of an assertion
         elif (log_control == 'BEGIN_ASSERTION'):
-            assert_string = '\n---> Assertion: ' + assertion_id + '\n'
+            assert_string = '\n---> Assertion: ' + assertion_id + '\n' # Here we can the the Rule
             self.TextLogHandle.write(assert_string)
             print(assert_string)
 
@@ -437,16 +442,19 @@ class Log:
             # for the assertion 
             assertion_description = self.assert_xl(assertion_id, log_control)
 
+            self.indvProp['Status'] = log_control
+
             # log pass/fail status to the text log 
             if (log_control != self.PASS or log_control != self.INCOMPLETE):
                 # include the assertion description in the text log
-                log_string =  ('Assertion Description: %s\n<--- Assertion %s: %s\n' % (assertion_description.encode('utf-8'), self.AssertionID, log_control))
+                log_string =  ('Assertion Description: %s\n<--- Assertion %s: %s\n' % (assertion_description.encode('utf-8'), self.AssertionID, log_control)) # Assertion Descriptn and Status
+                self.indvProp['Description'] = assertion_description
             else:
                 log_string =  ('<--- Assertion %s: %s\n' % (self.AssertionID, log_control))
 
             self.TextLogHandle.write(log_string)
             print(log_string)
-                
+            print(log_string)    
             # increment the pass/warn/fail counter
             self.Assertion_Counter[log_control] += 1
 
@@ -467,11 +475,31 @@ class Log:
                 log_string = ""
             
             #  output to the text log file
-            self.TextLogHandle.write(log_string + '\n')
+            self.TextLogHandle.write(log_string) 
 
             # output to the console
             if (log_control != 'TX_COMMENT'):
                 print(log_string +'\n')
+
+            self.indvProp['Comment'] = log_string 
+            
+
+        if not os.path.isfile('log.json'): 
+
+            with open('log.json', mode='w') as fr:
+                json.dump([], fr) 
+
+        feeds = None
+
+        with open('log.json', mode='r') as fj:
+                feeds = json.load(fj) 
+
+
+        with open('log.json', 'w') as fw:
+            feeds.append(self.indvProp)
+            json.dump(feeds, fw, sort_keys=True, indent=4)
+        
+        self.indvProp = {} 
 
         # success
         return(1) 
