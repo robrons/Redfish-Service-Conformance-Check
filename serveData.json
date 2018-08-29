@@ -1,1 +1,122 @@
-{"20180829-100727": {"0.0.0": {}, "6.1.0": {"Description": "All the URI's that are not valid should return 404 which is method not found.", "Status": "PASS"}, "6.1.1": {"Description": "A Redfish interface shall be exposed through a web service endpoint implemented using Hypertext Transfer Protocols, version 1.1 (RFCL616).", "Status": "PASS"}, "6.1.2": {"Description": "Each unique instance of a resource shall be identified by a URI; thus a URI cannot reference multiple resources though it may reference a single collection resource.", "Status": "PASS"}, "6.1.6": {"Description": "The unique identifier part of a URI shall be unique within the implementation.", "Status": "PASS"}, "6.1.7": {"Description": "URIs, as described in RFCL986, may also contain a query (?query) and a frag (#frag) components.  Queries are addressed in the section Query Parameters.  Fragments (frag) shall be ignored by the server when used as the URI for submitting an operation.", "Status": "PASS"}, "6.1.8.1": {"Comment": "Requesting POST on resource /redfish/v1/Sessions with request body {'UserName': 'root', 'Password': 'redfish'}", "Description": "\nPOST\nObject create, Object action, Eventing\nYes\n", "Status": "PASS"}, "6.1.8.1.1": {"Description": "The service shall set the Location header to the URI of the newly created resource.   ", "Status": "PASS"}, "6.1.8.1.2": {"Description": "It may include a response body containing the representation of the newly created resource", "Status": "PASS"}, "6.1.8.2": {"Description": "\nGET\nObject or Collection retrieval\nYes\n", "Status": "PASS"}, "6.1.8.3": {"Comment": "~ note: PATCH could not be verified", "Description": "\nPATCH\nObject update\nYes\n", "Status": "WARN"}, "6.1.8.4": {"Comment": "DEBUG response headers: Location: /redfish/v1/Sessions/50; X-Auth-Token: 75ab31a278a9fe941a90e33a2c36b4e0", "Description": "\nDELETE\nObject delete\nYes\n", "Status": "PASS"}, "6.1.9": {"Description": "<PUT and HEAD may be also be supported> - Other HTTP methods are not allowed and shall receive a 405 response.", "Status": "PASS"}}}
+{
+    "20180829-104959": {
+        "0.0.0": {},
+        "6.1.0": {
+            "Description": "All the URI's that are not valid should return 404 which is method not found.",
+            "Status": "PASS"
+        },
+        "6.1.1": {
+            "Description": "A Redfish interface shall be exposed through a web service endpoint implemented using Hypertext Transfer Protocols, version 1.1 (RFCL616).",
+            "Status": "PASS"
+        },
+        "6.1.2": {
+            "Description": "Each unique instance of a resource shall be identified by a URI; thus a URI cannot reference multiple resources though it may reference a single collection resource.",
+            "Status": "PASS"
+        },
+        "6.1.6": {
+            "Description": "The unique identifier part of a URI shall be unique within the implementation.",
+            "Status": "PASS"
+        },
+        "6.1.7": {
+            "Description": "URIs, as described in RFCL986, may also contain a query (?query) and a frag (#frag) components.  Queries are addressed in the section Query Parameters.  Fragments (frag) shall be ignored by the server when used as the URI for submitting an operation.",
+            "Status": "PASS"
+        },
+        "6.1.8.1": {
+            "Comment": "Requesting POST on resource /redfish/v1/Sessions with request body {'UserName': 'root', 'Password': 'redfish'}",
+            "Description": "\nPOST\nObject create, Object action, Eventing\nYes\n",
+            "Status": "PASS"
+        },
+        "6.1.8.1.1": {
+            "Description": "The service shall set the Location header to the URI of the newly created resource.   ",
+            "Status": "PASS"
+        },
+        "6.1.8.1.2": {
+            "Description": "It may include a response body containing the representation of the newly created resource",
+            "Status": "PASS"
+        },
+        "6.1.8.2": {
+            "Description": "\nGET\nObject or Collection retrieval\nYes\n",
+            "Status": "PASS"
+        },
+        "6.1.8.3": {
+            "Comment": "~ note: PATCH could not be verified",
+            "Description": "\nPATCH\nObject update\nYes\n",
+            "Status": "WARN"
+        },
+        "6.1.8.4": {
+            "Comment": "DEBUG response headers: Location: /redfish/v1/Sessions/64; X-Auth-Token: 3428401509d5378c0065fd911b4fcb9b",
+            "Description": "\nDELETE\nObject delete\nYes\n",
+            "Status": "PASS"
+        },
+        "6.1.9": {
+            "Description": "<PUT and HEAD may be also be supported> - Other HTTP methods are not allowed and shall receive a 405 response.",
+            "Status": "PASS"
+        },
+        "Summary": {
+            "Cached URIs": "1",
+            "DNS Name": "10.9.1.1",
+            "Description": "Redfish",
+            "Run Time": "0 Min & 17 Sec"
+        }
+    },
+    "20180829-105130": {
+        "0.0.0": {},
+        "6.1.0": {
+            "Description": "All the URI's that are not valid should return 404 which is method not found.",
+            "Status": "PASS"
+        },
+        "6.1.1": {
+            "Description": "A Redfish interface shall be exposed through a web service endpoint implemented using Hypertext Transfer Protocols, version 1.1 (RFCL616).",
+            "Status": "PASS"
+        },
+        "6.1.2": {
+            "Description": "Each unique instance of a resource shall be identified by a URI; thus a URI cannot reference multiple resources though it may reference a single collection resource.",
+            "Status": "PASS"
+        },
+        "6.1.6": {
+            "Description": "The unique identifier part of a URI shall be unique within the implementation.",
+            "Status": "PASS"
+        },
+        "6.1.7": {
+            "Description": "URIs, as described in RFCL986, may also contain a query (?query) and a frag (#frag) components.  Queries are addressed in the section Query Parameters.  Fragments (frag) shall be ignored by the server when used as the URI for submitting an operation.",
+            "Status": "PASS"
+        },
+        "6.1.8.1": {
+            "Comment": "Requesting POST on resource /redfish/v1/Sessions with request body {'UserName': 'root', 'Password': 'redfish'}",
+            "Description": "\nPOST\nObject create, Object action, Eventing\nYes\n",
+            "Status": "PASS"
+        },
+        "6.1.8.1.1": {
+            "Description": "The service shall set the Location header to the URI of the newly created resource.   ",
+            "Status": "PASS"
+        },
+        "6.1.8.1.2": {
+            "Description": "It may include a response body containing the representation of the newly created resource",
+            "Status": "PASS"
+        },
+        "6.1.8.2": {
+            "Description": "\nGET\nObject or Collection retrieval\nYes\n",
+            "Status": "PASS"
+        },
+        "6.1.8.3": {
+            "Comment": "~ note: PATCH could not be verified",
+            "Description": "\nPATCH\nObject update\nYes\n",
+            "Status": "WARN"
+        },
+        "6.1.8.4": {
+            "Comment": "DEBUG response headers: Location: /redfish/v1/Sessions/66; X-Auth-Token: c9aa29f6a551e9643f87cd1964d23c74",
+            "Description": "\nDELETE\nObject delete\nYes\n",
+            "Status": "PASS"
+        },
+        "6.1.9": {
+            "Description": "<PUT and HEAD may be also be supported> - Other HTTP methods are not allowed and shall receive a 405 response.",
+            "Status": "PASS"
+        },
+        "Summary": {
+            "Cached URIs": "1",
+            "DNS Name": "10.9.1.1",
+            "Description": "Redfish",
+            "Run Time": "0 Min & 16 Sec"
+        }
+    }
+}
