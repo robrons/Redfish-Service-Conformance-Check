@@ -1,8 +1,1 @@
-{
-    "0.0.0": {},
-    "6.1.0": {
-        "Description": "All the URI's that are not valid should return 404 which is method not found.",
-        "Status": "PASS"
-    },
-    "6.1.1": {}
-}
+{}
