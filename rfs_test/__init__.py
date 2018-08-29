@@ -47,7 +47,7 @@ def run(sut):
         end = time.time()
         print ("Total Run Time: %d Minutes and %d Seconds." %((end - start)/60, (end - start)%60))
     ## close log files
-    #-log.assertion_log('CLOSE', None)
+    log.assertion_log('CLOSE', None)
 # end run
 
 

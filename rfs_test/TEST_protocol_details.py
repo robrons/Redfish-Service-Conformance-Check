@@ -5146,6 +5146,7 @@ def run(self, log):
     # ...DELETE the new session that was created above note: this assertion expects 6_1_8_1 to run prior to this
     assertion_status = Assertion_6_1_8_4(self, log) 
     assertion_status = Assertion_6_1_9(self, log)
+    '''
     # Assertion 6.1.10 is client specific - All Redfish Clients shall correctly handle HTTP redirect.
     assertion_status = Assertion_6_1_11(self, log)
     assertion_status = Assertion_6_1_12(self, log)
@@ -5242,3 +5243,4 @@ def run(self, log):
     #-assertion_status = Assertion_6_5_31(self, log)
     assertion_status = Assertion_6_5_35(self, log)
     #assertion_status = Assertion_6_5_40(self,log)
+    '''

@@ -1,134 +1,51 @@
 {
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs": {
-        "@odata.context": "/redfish/v1/$metadata#DellJobCollection.DellJobCollection",
-        "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs",
-        "@odata.type": "#DellJobCollection.DellJobCollection",
-        "Description": "Collection of Job Instances",
-        "Id": "JobQueue",
-        "Members": [
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497128320"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497314534"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497425548"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497538338"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497617980"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497723612"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497896556"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498010474"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498115988"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498195153"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498308593"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498430526"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498485191"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498546392"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498603655"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228414694"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228452500"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228757741"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228779393"
-            },
-            {
-                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228823425"
-            }
-        ],
-        "Members@odata.count": 21,
-        "Name": "JobQueue"
+    "/redfish/v1/EventService/Subscriptions": {
+        "@odata.context": "/redfish/v1/$metadata#EventDestinationCollection.EventDestinationCollection",
+        "@odata.id": "/redfish/v1/EventService/Subscriptions",
+        "@odata.type": "#EventDestinationCollection.EventDestinationCollection",
+        "Description": "List of Event subscriptions",
+        "Members": [],
+        "Members@odata.count": 0,
+        "Name": "Event Subscriptions Collection"
     },
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs_header": {
+    "/redfish/v1/EventService/Subscriptions_header": {
         "access-control-allow-origin": "*",
         "allow": "POST",
         "cache-control": "no-cache",
-        "content-length": "1900",
+        "content-length": "342",
         "content-type": "application/json;odata.metadata=minimal;charset=utf-8",
-        "date": "Wed, 29 Aug 2018 19:05:52 GMT",
-        "link": "</redfish/v1/Schemas/DellJobCollection.json>;rel=describedby",
+        "date": "Wed, 29 Aug 2018 20:06:49 GMT",
+        "link": "</redfish/v1/Schemas/EventDestinationCollection.json>;rel=describedby",
         "odata-version": "4.0",
         "server": "Apache/2.4",
         "x-frame-options": "DENY"
     },
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs_status": 200,
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Sel/104": {
-        "error": {
-            "@Message.ExtendedInfo": [
-                {
-                    "Message": "Unable to complete the operation because the resource ~~104~ entered in not found.",
-                    "MessageArgs": [
-                        "104"
-                    ],
-                    "MessageArgs@odata.count": 1,
-                    "MessageId": "iDRAC.1.6.SYS403",
-                    "RelatedProperties": [],
-                    "RelatedProperties@odata.count": 0,
-                    "Resolution": "Enter the correct resource and retry the operation. For information about valid resource, see the Redfish Users Guide available on the support site.",
-                    "Severity": "Informational"
-                },
-                {
-                    "Message": "The resource at the URI 104 was not found.",
-                    "MessageArgs": [
-                        "104"
-                    ],
-                    "MessageArgs@odata.count": 1,
-                    "MessageId": "Base.1.0.ResourceMissingAtURI",
-                    "RelatedProperties": [
-                        ""
-                    ],
-                    "RelatedProperties@odata.count": 1,
-                    "Resolution": "Place a valid resource at thr URI or correct the URI and resubmit the request.",
-                    "Severity": "Critical"
-                }
-            ],
-            "code": "Base.1.0.GeneralError",
-            "message": "A general error has occurred. See ExtendedInfo for more information"
-        }
+    "/redfish/v1/EventService/Subscriptions_status": 200,
+    "/redfish/v1/UpdateService/FirmwareInventory/Installed-104684-0": {
+        "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+        "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/Installed-104684-0",
+        "@odata.type": "#SoftwareInventory.v1_0_0.SoftwareInventory",
+        "Description": "Represents Firmware Inventory",
+        "Id": "Installed-104684-0",
+        "Name": "iDRAC Service Module Installer",
+        "Status": {
+            "Health": "OK",
+            "State": "Enabled"
+        },
+        "Updateable": true,
+        "Version": "0"
     },
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Sel/104_header": {
+    "/redfish/v1/UpdateService/FirmwareInventory/Installed-104684-0_header": {
         "access-control-allow-origin": "*",
         "cache-control": "no-cache",
-        "content-length": "901",
+        "content-length": "403",
         "content-type": "application/json;odata.metadata=minimal;charset=utf-8",
-        "date": "Wed, 29 Aug 2018 19:05:52 GMT",
+        "date": "Wed, 29 Aug 2018 20:06:49 GMT",
+        "etag": "23979f34994da11ad8fc6f0cb70ebee3",
+        "link": "</redfish/v1/Schemas/SoftwareInventory.v1_0_0.json>;rel=describedby",
         "odata-version": "4.0",
         "server": "Apache/2.4",
         "x-frame-options": "DENY"
     },
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Sel/104_status": 404
+    "/redfish/v1/UpdateService/FirmwareInventory/Installed-104684-0_status": 200
 }

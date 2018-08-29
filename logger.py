@@ -427,13 +427,14 @@ class Log:
             # log the tally of pass/warn/fail stats and close the log files
             completion_str = '\n Assertions Stats:\n Passed= %s Warn= %s Failed= %s \n Total Assertions Run= %s' % (str(self.Assertion_Counter[self.PASS] + self.Assertion_Counter[self.INCOMPLETE]), str(self.Assertion_Counter[self.WARN]), str(self.Assertion_Counter[self.FAIL]), str(self.Assertion_Counter[self.PASS] + self.Assertion_Counter[self.INCOMPLETE] + self.Assertion_Counter[self.WARN] + self.Assertion_Counter[self.FAIL]))
 
-            self.assertion_log('line', completion_str)
-            self.assertion_log('XL_LOG_HEADER', completion_str)
+            #self.assertion_log('line', completion_str)
+            #self.assertion_log('XL_LOG_HEADER', completion_str)
 
             self.TextLogHandle.close()
 
             print(' Assertions check successfully completed. Please see assertion spreadsheet: %s for checked assertions summary and log files: %s and %s for detailed log\n' % (self.XlRunPath, self.SUT_XlDestPath, self.TextLogPath))
         
+
             # Adds the final results as the assertions come to a completion
 
             assertionResult = {}
@@ -450,7 +451,12 @@ class Log:
      
             assertionResult[dstr] = data
 
+            with open('serveData.json', mode='w') as fw:
+                json.dump(assertionResult, sort_keys=True, indent=4) 
+
             os.remove('log.json')
+            
+            return (1)
                
         #
         # end of handling open/close of log files
@@ -518,7 +524,7 @@ class Log:
 
             singleRule['Comment'] = log_string 
 
-       with open('log.json', 'w') as fw:
+        with open('log.json', 'w') as fw:
             json.dump(data, fw, sort_keys=True, indent=4)
         
         # success
