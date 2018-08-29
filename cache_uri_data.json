@@ -1,65 +1,134 @@
 {
-    "/redfish/v1/Chassis/System.Embedded.1/Sensors/Voltages/iDRAC.Embedded.1%23CPU1MEM012VPPPG": {
-        "@odata.context": "/redfish/v1/$metadata#Power.Power",
-        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Sensors/Voltages/iDRAC.Embedded.1%23CPU1MEM012VPPPG",
-        "@odata.type": "#Power.v1_1_0.Voltage",
-        "LowerThresholdCritical": null,
-        "LowerThresholdFatal": null,
-        "LowerThresholdNonCritical": null,
-        "MaxReadingRange": 197,
-        "MemberId": "iDRAC.Embedded.1#CPU1MEM012VPPPG",
-        "MinReadingRange": 139,
-        "Name": "CPU1 MEM012 VPP PG",
-        "PhysicalContext": "CPU",
-        "ReadingVolts": 1,
-        "RelatedItem": [
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs": {
+        "@odata.context": "/redfish/v1/$metadata#DellJobCollection.DellJobCollection",
+        "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs",
+        "@odata.type": "#DellJobCollection.DellJobCollection",
+        "Description": "Collection of Job Instances",
+        "Id": "JobQueue",
+        "Members": [
             {
-                "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Processors/CPU.Socket.1"
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497128320"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497314534"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497425548"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497538338"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497617980"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497723612"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994497896556"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498010474"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498115988"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498195153"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498308593"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498430526"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498485191"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498546392"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_994498603655"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228414694"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228452500"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228757741"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228779393"
+            },
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228823425"
             }
         ],
-        "RelatedItem@odata.count": 1,
-        "SensorNumber": 37,
-        "Status": {
-            "Health": "OK",
-            "State": "Enabled"
-        },
-        "UpperThresholdCritical": null,
-        "UpperThresholdFatal": null,
-        "UpperThresholdNonCritical": null
+        "Members@odata.count": 21,
+        "Name": "JobQueue"
     },
-    "/redfish/v1/Chassis/System.Embedded.1/Sensors/Voltages/iDRAC.Embedded.1%23CPU1MEM012VPPPG_header": {
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs_header": {
         "access-control-allow-origin": "*",
+        "allow": "POST",
         "cache-control": "no-cache",
-        "content-length": "719",
+        "content-length": "1900",
         "content-type": "application/json;odata.metadata=minimal;charset=utf-8",
-        "date": "Tue, 28 Aug 2018 05:36:26 GMT",
-        "link": "</redfish/v1/Schemas/Power.v1_0_2.json>;rel=describedby",
+        "date": "Wed, 29 Aug 2018 19:05:52 GMT",
+        "link": "</redfish/v1/Schemas/DellJobCollection.json>;rel=describedby",
         "odata-version": "4.0",
         "server": "Apache/2.4",
         "x-frame-options": "DENY"
     },
-    "/redfish/v1/Chassis/System.Embedded.1/Sensors/Voltages/iDRAC.Embedded.1%23CPU1MEM012VPPPG_status": 200,
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Roles/None": {
-        "@odata.context": "/redfish/v1/$metadata#Role.Role",
-        "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Roles/None",
-        "@odata.type": "#Role.v1_0_2.Role",
-        "AssignedPrivileges": [],
-        "AssignedPrivileges@odata.count": 0,
-        "Description": "User Role None",
-        "Id": "None",
-        "IsPredefined": true,
-        "Name": "User Role"
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs_status": 200,
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Sel/104": {
+        "error": {
+            "@Message.ExtendedInfo": [
+                {
+                    "Message": "Unable to complete the operation because the resource ~~104~ entered in not found.",
+                    "MessageArgs": [
+                        "104"
+                    ],
+                    "MessageArgs@odata.count": 1,
+                    "MessageId": "iDRAC.1.6.SYS403",
+                    "RelatedProperties": [],
+                    "RelatedProperties@odata.count": 0,
+                    "Resolution": "Enter the correct resource and retry the operation. For information about valid resource, see the Redfish Users Guide available on the support site.",
+                    "Severity": "Informational"
+                },
+                {
+                    "Message": "The resource at the URI 104 was not found.",
+                    "MessageArgs": [
+                        "104"
+                    ],
+                    "MessageArgs@odata.count": 1,
+                    "MessageId": "Base.1.0.ResourceMissingAtURI",
+                    "RelatedProperties": [
+                        ""
+                    ],
+                    "RelatedProperties@odata.count": 1,
+                    "Resolution": "Place a valid resource at thr URI or correct the URI and resubmit the request.",
+                    "Severity": "Critical"
+                }
+            ],
+            "code": "Base.1.0.GeneralError",
+            "message": "A general error has occurred. See ExtendedInfo for more information"
+        }
     },
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Roles/None_header": {
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Sel/104_header": {
         "access-control-allow-origin": "*",
         "cache-control": "no-cache",
-        "content-length": "291",
+        "content-length": "901",
         "content-type": "application/json;odata.metadata=minimal;charset=utf-8",
-        "date": "Tue, 28 Aug 2018 05:36:27 GMT",
-        "link": "</redfish/v1/Schemas/Role.v1_0_2.json>;rel=describedby",
+        "date": "Wed, 29 Aug 2018 19:05:52 GMT",
         "odata-version": "4.0",
         "server": "Apache/2.4",
         "x-frame-options": "DENY"
     },
-    "/redfish/v1/Managers/iDRAC.Embedded.1/Roles/None_status": 200
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Sel/104_status": 404
 }

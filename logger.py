@@ -56,7 +56,6 @@ class Log:
         self.FAIL = 'FAIL'
         self.INCOMPLETE = 'PASS (Incomplete). Check Log for details' # to remove
         self.assertionJSN = [dict()] 
-        self.indvProp = dict()
 
         # Redfish latest spec url
         self.RedfishSpecHyperlinkPath = 'https://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.0.2.pdf'
@@ -328,20 +327,24 @@ class Log:
     ################################################################################################
     def assertion_log(self, log_control, log_string, SUT_prop = None, service_root = None) :       
 
-        data = None
+        data = {}
 
         if not os.path.isfile('log.json'): 
             with open('log.json', mode='w') as fw:
-                json.dump([], fw) 
+                json.dump(data, fw) 
 
         with open('log.json', mode='r') as fr: 
             data = json.load(fr) 
 
         assertion_id = self.AssertionID
 
-        if assertion_id in data:
-            
-        self.indvProp['Rule'] = self.AssertionID
+        singleRule = {}
+
+        if not assertion_id in data:
+            data[assertion_id] = singleRule
+        else:
+            singleRule = data[assertion_id]
+
         ##
         # handle open/close of the log files
         #
@@ -455,13 +458,13 @@ class Log:
             # for the assertion 
             assertion_description = self.assert_xl(assertion_id, log_control)
 
-            self.indvProp['Status'] = log_control
+            singleRule['Status'] = log_control
 
             # log pass/fail status to the text log 
             if (log_control != self.PASS or log_control != self.INCOMPLETE):
                 # include the assertion description in the text log
                 log_string =  ('Assertion Description: %s\n<--- Assertion %s: %s\n' % (assertion_description.encode('utf-8'), self.AssertionID, log_control)) # Assertion Descriptn and Status
-                self.indvProp['Description'] = assertion_description
+                singleRule['Description'] = assertion_description
             else:
                 log_string =  ('<--- Assertion %s: %s\n' % (self.AssertionID, log_control))
 
@@ -494,21 +497,11 @@ class Log:
             if (log_control != 'TX_COMMENT'):
                 print(log_string +'\n')
 
-            self.indvProp['Comment'] = log_string 
-            
-
-               feeds = None
-
-        with open('log.json', mode='r') as fj:
-                feeds = json.load(fj) 
-
+            singleRule['Comment'] = log_string 
 
         with open('log.json', 'w') as fw:
-            feeds.append(self.indvProp)
-            json.dump(feeds, fw, sort_keys=True, indent=4)
+            json.dump(data, fw, sort_keys=True, indent=4)
         
-        self.indvProp = {} 
-
         # success
         return(1) 
     #
