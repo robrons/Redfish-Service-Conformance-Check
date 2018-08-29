@@ -327,7 +327,20 @@ class Log:
     # Return: 0 on failure; 1 on success
     ################################################################################################
     def assertion_log(self, log_control, log_string, SUT_prop = None, service_root = None) :       
+
+        data = None
+
+        if not os.path.isfile('log.json'): 
+            with open('log.json', mode='w') as fw:
+                json.dump([], fw) 
+
+        with open('log.json', mode='r') as fr: 
+            data = json.load(fr) 
+
         assertion_id = self.AssertionID
+
+        if assertion_id in data:
+            
         self.indvProp['Rule'] = self.AssertionID
         ##
         # handle open/close of the log files
@@ -484,12 +497,7 @@ class Log:
             self.indvProp['Comment'] = log_string 
             
 
-        if not os.path.isfile('log.json'): 
-
-            with open('log.json', mode='w') as fr:
-                json.dump([], fr) 
-
-        feeds = None
+               feeds = None
 
         with open('log.json', mode='r') as fj:
                 feeds = json.load(fj) 
