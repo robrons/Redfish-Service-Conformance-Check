@@ -434,9 +434,17 @@ class Log:
 
             print(' Assertions check successfully completed. Please see assertion spreadsheet: %s for checked assertions summary and log files: %s and %s for detailed log\n' % (self.XlRunPath, self.SUT_XlDestPath, self.TextLogPath))
 
-        with open('log.json', 'w') as fw:
-            json.dump(data, fw, sort_keys=True, indent=4)
-        
+        assertionResult = {}
+
+        if not os.path.isfile('serveData.json'): 
+            with open('serveData.json', mode='w') as fw:
+                json.dump(assertionResult, fw) 
+
+        with open('serveData.json', mode='r') as fr: 
+            assertionResult = json.load(fr) 
+
+        assertionResult[]
+ 
            
         #
         # end of handling open/close of log files
@@ -504,17 +512,7 @@ class Log:
 
             singleRule['Comment'] = log_string 
 
-        assertionResult = {}
-
-        if not os.path.isfile('serveData.json'): 
-            with open('serveData.json', mode='w') as fw:
-                json.dump(assertionResult, fw) 
-
-        with open('log.json', mode='r') as fr: 
-            data = json.load(fr) 
-
-
-        with open('log.json', 'w') as fw:
+       with open('log.json', 'w') as fw:
             json.dump(data, fw, sort_keys=True, indent=4)
         
         # success
