@@ -433,19 +433,25 @@ class Log:
             self.TextLogHandle.close()
 
             print(' Assertions check successfully completed. Please see assertion spreadsheet: %s for checked assertions summary and log files: %s and %s for detailed log\n' % (self.XlRunPath, self.SUT_XlDestPath, self.TextLogPath))
+        
+            # Adds the final results as the assertions come to a completion
 
-        assertionResult = {}
+            assertionResult = {}
 
-        if not os.path.isfile('serveData.json'): 
-            with open('serveData.json', mode='w') as fw:
-                json.dump(assertionResult, fw) 
+            if not os.path.isfile('serveData.json'): 
+                with open('serveData.json', mode='w') as fw:
+                    json.dump(assertionResult, fw) 
 
-        with open('serveData.json', mode='r') as fr: 
-            assertionResult = json.load(fr) 
+            with open('serveData.json', mode='r') as fr: 
+                assertionResult = json.load(fr) 
 
-        assertionResult[]
- 
-           
+            #datetime string
+            dstr = str(datetime.now().strftime("%Y%m%d-%H%M%S"))
+     
+            assertionResult[dstr] = data
+
+            os.remove('log.json')
+               
         #
         # end of handling open/close of log files
         ##
