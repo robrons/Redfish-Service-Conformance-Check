@@ -452,7 +452,7 @@ class Log:
             assertionResult[dstr] = data
 
             with open('serveData.json', mode='w') as fw:
-                json.dump(assertionResult, sort_keys=True, indent=4) 
+                json.dump(assertionResult, fw, sort_keys=True, indent=4) 
 
             os.remove('log.json')
             

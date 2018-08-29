@@ -1,51 +1,59 @@
 {
-    "/redfish/v1/EventService/Subscriptions": {
-        "@odata.context": "/redfish/v1/$metadata#EventDestinationCollection.EventDestinationCollection",
-        "@odata.id": "/redfish/v1/EventService/Subscriptions",
-        "@odata.type": "#EventDestinationCollection.EventDestinationCollection",
-        "Description": "List of Event subscriptions",
-        "Members": [],
-        "Members@odata.count": 0,
-        "Name": "Event Subscriptions Collection"
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288": {
+        "@odata.context": "/redfish/v1/$metadata#DellJob.DellJob",
+        "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288",
+        "@odata.type": "#DellJob.v1_0_0.DellJob",
+        "CompletionTime": "2017-07-10T16:40:43",
+        "Description": "Job Instance",
+        "EndTime": null,
+        "Id": "JID_997228434288",
+        "JobState": "Completed",
+        "JobType": "iDRACConfiguration",
+        "Message": "Job successfully Completed",
+        "MessageArgs": [],
+        "MessageId": "JCP007",
+        "Name": "iDRACConfig:iDRAC.Embedded.1",
+        "PercentComplete": 100,
+        "StartTime": "TIME_NOW",
+        "TargetSettingsURI": null
     },
-    "/redfish/v1/EventService/Subscriptions_header": {
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288_header": {
         "access-control-allow-origin": "*",
-        "allow": "POST",
+        "allow": "DELETE",
         "cache-control": "no-cache",
-        "content-length": "342",
+        "content-length": "519",
         "content-type": "application/json;odata.metadata=minimal;charset=utf-8",
-        "date": "Wed, 29 Aug 2018 20:06:49 GMT",
-        "link": "</redfish/v1/Schemas/EventDestinationCollection.json>;rel=describedby",
+        "date": "Wed, 29 Aug 2018 20:11:27 GMT",
+        "link": "</redfish/v1/Schemas/DellJob.v1_0_0.json>;rel=describedby",
         "odata-version": "4.0",
         "server": "Apache/2.4",
         "x-frame-options": "DENY"
     },
-    "/redfish/v1/EventService/Subscriptions_status": 200,
-    "/redfish/v1/UpdateService/FirmwareInventory/Installed-104684-0": {
-        "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
-        "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/Installed-104684-0",
-        "@odata.type": "#SoftwareInventory.v1_0_0.SoftwareInventory",
-        "Description": "Represents Firmware Inventory",
-        "Id": "Installed-104684-0",
-        "Name": "iDRAC Service Module Installer",
-        "Status": {
-            "Health": "OK",
-            "State": "Enabled"
-        },
-        "Updateable": true,
-        "Version": "0"
+    "/redfish/v1/Managers/iDRAC.Embedded.1/Jobs/JID_997228434288_status": 200,
+    "/redfish/v1/SessionService": {
+        "@odata.context": "/redfish/v1/$metadata#SessionService.SessionService",
+        "@odata.id": "/redfish/v1/SessionService",
+        "@odata.type": "#SessionService.v1_0_2.SessionService",
+        "Description": "Session Service",
+        "Id": "SessionService",
+        "Name": "Session Service",
+        "ServiceEnabled": true,
+        "SessionTimeout": 1800,
+        "Sessions": {
+            "@odata.id": "/redfish/v1/Sessions"
+        }
     },
-    "/redfish/v1/UpdateService/FirmwareInventory/Installed-104684-0_header": {
+    "/redfish/v1/SessionService_header": {
         "access-control-allow-origin": "*",
+        "allow": "PATCH",
         "cache-control": "no-cache",
-        "content-length": "403",
+        "content-length": "339",
         "content-type": "application/json;odata.metadata=minimal;charset=utf-8",
-        "date": "Wed, 29 Aug 2018 20:06:49 GMT",
-        "etag": "23979f34994da11ad8fc6f0cb70ebee3",
-        "link": "</redfish/v1/Schemas/SoftwareInventory.v1_0_0.json>;rel=describedby",
+        "date": "Wed, 29 Aug 2018 20:11:27 GMT",
+        "link": "</redfish/v1/Schemas/SessionService.v1_0_2.json>;rel=describedby",
         "odata-version": "4.0",
         "server": "Apache/2.4",
         "x-frame-options": "DENY"
     },
-    "/redfish/v1/UpdateService/FirmwareInventory/Installed-104684-0_status": 200
+    "/redfish/v1/SessionService_status": 200
 }
