@@ -24,6 +24,7 @@ from rfs_test_in_progress import TEST_service_details
 from rfs_test_in_progress import TEST_security
 from rfs_test import TEST_event_service
 from rfs_test import TEST_manager_account
+from rfs_test import TEST_manager
 
 ###################################################################################################
 # Name: run(sut)
@@ -41,7 +42,8 @@ def run(sut):
         run_single([TEST_protocol_details, TEST_datamodel_schema], sut, log)
     else:
         # Run all assertions
-        TEST_manager_account.run(sut, log)
+        TEST_manager.run(sut, log)
+        #TEST_manager_account.run(sut, log)
         #TEST_event_service.run(sut, log)
         #TEST_protocol_details.run(sut, log) # Takes a long time. 
         #TEST_security.run(sut, log) # Assertion: 9.3.1.4 is lagging
