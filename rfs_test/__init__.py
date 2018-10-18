@@ -43,7 +43,7 @@ def run(sut):
     else:
         # Run all assertions
         #TEST_manager.run(sut, log)
-        TEST_manager_account.run(sut, log)
+        #TEST_manager_account.run(sut, log)
         #TEST_event_service.run(sut, log)
         #TEST_protocol_details.run(sut, log) # Takes a long time. 
         #TEST_security.run(sut, log) # Assertion: 9.3.1.4 is lagging
@@ -53,7 +53,7 @@ def run(sut):
         #TEST_computersystem_schema.run(sut, log)
         #TEST_accountservice_schema.run(sut, log)
         #TEST_assembly_schema.run(sut, log)
-        #TEST_actioninfo_schema.run(sut, log)
+        TEST_actioninfo_schema.run(sut, log)
         #TEST_attributeregistry_schema.run(sut, log)
         # end: assertion verification
     ## close log files
